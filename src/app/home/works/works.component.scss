@@ -1,0 +1,67 @@
+.main-work .work-head {
+  text-align: center;
+}
+.main-work .work-head .mat-button-toggle-group {
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+.main-work .work-cont {
+  display: flex;
+  flex-wrap: wrap;
+}
+.main-work .work-cont .mat-card {
+  width: 100%;
+  margin: 10px;
+  min-width: 400px;
+  flex: 1;
+}
+.work-cont{
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flex;
+  display: -o-flex;
+  display: flex;
+  flex-wrap: wrap;
+}
+.work-item{
+  flex: 1;
+  padding: 10px;
+}
+.work-item-cont{
+  text-align: center;
+  height: 200px;
+  background: url('/assets/slide/back01.jpg') center / cover;
+  box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.5);
+  font-size: 25px;
+  transition: all .5s;
+  cursor: pointer;
+}
+.work-item-cont:hover i{
+  opacity: 1;
+}
+.work-item-cont:hover .tito{
+  opacity: 1;
+  padding-top: 40px;
+}
+.work-item-cont .tito{
+  margin-bottom: 20px;
+  transition: all .5s;
+  padding-top: 70px;
+  white-space: nowrap;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+.work-item-cont i{
+  color: rgba(255, 255, 255, 0.8);
+  background-color: rgba(0, 0, 0, 0.2);
+  padding: 10px;
+  border-radius: 100px;
+  opacity: 0;
+  transition: opacity .5s;
+}
+
+.butt-togg{
+  text-align: center;
+  margin-top: 30px;
+  margin-bottom: 30px;
+}

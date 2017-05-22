@@ -1,0 +1,34 @@
+.work-cover{
+    height: 300px;
+    text-align: center;
+    h1{
+        font-family: 'Racing Sans One', cursive;
+        color: white;
+        padding-top: 150px;
+        font-size: 50px;
+        margin: 0;
+    }
+}
+.work-cont{
+    display: flex;
+    margin-top: 20px;
+    .work-slid{
+        padding: 20px;
+        flex: 2;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        img{
+            width: 100%;
+        }
+        .radio-group{
+            margin-top: -40px;
+            z-index: 1;
+        }
+    }
+    .work-info{
+        padding-left: 20px;
+        padding-right: 20px;
+        flex: 3;
+    }
+}

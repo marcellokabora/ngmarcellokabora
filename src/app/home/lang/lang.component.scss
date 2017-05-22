@@ -1,0 +1,71 @@
+.main-lang {
+  padding-bottom: 80px;
+  background: url('/assets/slide/back03.jpg');
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.main-lang .lang-cont{
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flex;
+  display: -o-flex;
+  display: flex;
+  justify-content: space-between;
+  margin-top: -40px;
+}
+.main-lang .border{
+  position: relative;
+  text-align: center;
+  width: 150px;
+  height: 150px;
+  border-radius: 100%;
+  margin-top: 80px;
+  background-color:#39B4CC;
+  background-image:
+      linear-gradient(162deg, transparent 100%, #A2ECFB 100%),
+      linear-gradient(150deg, #A2ECFB 20%, transparent 0%);
+}
+.main-lang .border-100{
+  background-image:
+      linear-gradient(162deg, transparent 100%, #A2ECFB 50%),
+      linear-gradient(90deg, #A2ECFB 0%, transparent 0%);
+}
+.main-lang .border-20{
+  background-image:
+      linear-gradient(162deg, transparent 40%, #A2ECFB 40%),
+      linear-gradient(90deg, #A2ECFB 50%, transparent 50%);
+}
+.main-lang .border-70{
+  background-image:
+      linear-gradient(162deg, transparent 40%, #A2ECFB 40%),
+      linear-gradient(90deg, #A2ECFB 50%, transparent 50%);
+}
+.main-lang .info{
+  top: 30px;
+  position: relative;
+  font-size: 30px;
+}
+.main-lang .circle{
+  position: relative;
+  top: 5px;
+  left: 5px;
+  text-align: center;
+  width: 140px;
+  height: 140px;
+  border-radius: 100%;
+  background-color: #E6F4F7;
+  text-align: center;
+}
+.main-lang .text{
+  position: relative;
+  top: 0px;
+  color: #333348;
+  font-size: 20px;
+}
+.main-lang .percent{
+  margin-top: 0px;
+  color: #333348;
+  font-size: 30px;
+}

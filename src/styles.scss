@@ -1,1 +1,144 @@
-/* You can add global styles to this file, and also import other style files */
+@import '~@angular/material/theming';
+@include mat-core();
+$candy-app-primary: mat-palette($mat-grey);
+$candy-app-accent:  mat-palette($mat-grey, A200, A100, A400);
+$candy-app-warn:    mat-palette($mat-red);
+$candy-app-theme: mat-light-theme($candy-app-primary, $candy-app-accent, $candy-app-warn);
+@include angular-material-theme($candy-app-theme);
+
+@import url('https://fonts.googleapis.com/icon?family=Material+Icons');
+@import url('https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css');
+@import url('https://fonts.googleapis.com/css?family=Poppins|Racing+Sans+One');
+
+body{
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+}
+
+snack-bar-container{
+    min-width: 0px !important;
+    margin-bottom: 20px;
+}
+
+/*  MAIN  ---------------------------------------*/
+
+.container{
+  max-width: 1400px;
+  margin: auto;
+}
+.main-tito {
+  font-size: 25px;
+  font-weight: bold;
+  text-align: center;
+  padding-top: 50px;
+  position: inherit;
+  margin-bottom: 20px;
+}
+.main-tito .tito {
+  border-bottom: 1px solid gray;
+  padding-left: 100px;
+  padding-right: 100px;
+  padding-bottom: 15px;
+  font-size: 40px;
+}
+.main-tito .subo {
+  display: block;
+  margin-top: 45px;
+  font-size: 18px;
+  font-weight: lighter;
+  opacity: .8;
+}
+.main-tito.white {
+  color: white
+}
+.main-tito.white .tito {
+  border-bottom: 1px solid white;
+}
+.main-cont {
+  max-width: 1400px;
+  margin: auto;
+  padding-left: 30px;
+  padding-right: 30px;
+}
+
+
+.mat-tab-header{
+  display: none !important;
+}
+
+/*  MENU  ---------------------------------------*/
+
+.main-menu {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 999;
+  background-color: rgba(0, 0, 0, 0.7);
+  color: white;
+  .menu-shap {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    height: 100px;
+    background-color: black;
+    width: 180px;
+    .shap-arro {
+      position: absolute;
+      top: 0px;
+      right: -100px;
+      width: 0;
+      height: 0;
+      border-left: 100px solid transparent;
+      border-right: 100px solid transparent;
+      border-top: 100px solid black;
+    }
+    .shap-logo{
+      width: 100px;
+      position: relative;
+      left: 50px;
+      top: 23px;
+    }
+  }
+  .menu-cont{
+    margin-left: 260px;
+    .butt-menu{
+      opacity: .8;
+    }
+  }
+  .menu-side{
+    margin: 10px;
+    display: none !important;
+  }
+  .example-spacer {
+    flex: 1 1 auto;
+  }
+
+  @media (max-width: 1000px) {
+    .menu-cont{
+      display: none;
+    }
+    .menu-shap {
+      position: relative;
+      background-color: transparent;
+
+    top: 0px;
+    left: 0px;
+    height: auto;
+    width: auto;
+      
+      .shap-arro {
+        display: none;
+      }
+      .shap-logo{
+        width: auto;
+        position: relative;
+        left: auto;
+        top: auto;
+        height: 30px;
+      }
+    }
+  }
+
+
+}
+

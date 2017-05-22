@@ -1,0 +1,72 @@
+.main-skil {
+  text-align: center;
+}
+.skil-rows{
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flex;
+  display: -o-flex;
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+.skil-tito{
+  border-right: 1px solid silver;
+  height: 150px;
+  line-height: 150px;
+  font-size: 18px;
+  border-top: 1px solid silver;
+  padding-right: 20px;
+  padding-left: 20px;
+  width: 120px;
+}
+.skil-cont{
+  margin-top: 60px;
+}
+.skil-rows .butt-righ{
+  position: absolute;
+  right: 0;
+  line-height: 150px;
+  font-size: 40px;
+  cursor: pointer;
+  color: #888888;
+  border-left: 1px solid silver;;
+}
+.skil-cont .skil-info{
+  height: 150px;
+  flex: 4;
+  margin-right: 40px;
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flex;
+  display: -o-flex;
+  display: flex;
+  flex-wrap: nowrap;
+  overflow: auto;
+//   overflow-x:hidden;
+  overflow-y:hidden;
+  border-top: 1px solid silver;
+}
+.skil-cont .skil-rows:nth-child(1) .skil-info{
+  border-top: none;
+}
+.skil-cont .skil-rows:nth-child(1) .skil-tito{
+  border-top: none;
+}
+.skil-item{
+//   border-right: 1px solid silver;
+  font-weight: bold;
+  padding: 20px;
+  padding-top: 20px;
+}
+.skil-item img{
+  height: 80px;
+}
+.item-tito {
+    margin-top: 0px;
+    white-space: nowrap;
+    text-transform: capitalize;
+}
+.item-tito .perc{
+  color: gray;
+}

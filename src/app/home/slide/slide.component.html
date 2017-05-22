@@ -1,0 +1,48 @@
+<div class="main-slide">
+  <!--<i class="material-icons butt-left" (click)="goSLide(-1)">chevron_left</i>
+  <i class="material-icons butt-righ" (click)="goSLide(+1)">chevron_right</i>-->
+  <md-tab-group selectedIndex="{{slideback}}">
+    <md-tab class="mtab">
+      <div class="mtab-cont">
+        <div class="mtab-back"></div>
+        <div class="mtab-info">
+          <div class="mtab-tito">MARCELLO KABORA</div>
+          <div class="mtab-sepa"></div>
+          <div class="mtab-subt">FRONTEND DEVELOPER</div>
+          <div class="mtab-soci">
+            <i class="fa fa-facebook" aria-hidden="true"></i>
+            <i class="fa fa-twitter" aria-hidden="true"></i>
+            <i class="fa fa-linkedin" aria-hidden="true"></i>
+            <i class="fa fa-xing" aria-hidden="true"></i>
+            <i class="fa fa-github" aria-hidden="true"></i>
+          </div>
+        </div>
+      </div>
+    </md-tab>
+    <md-tab class="mtab">
+      <div class="mtab-cont">
+        <div class="mtab-back"></div>
+        <div class="mtab-info">
+          <div class="mtab-tito">MARCELLO KABORA</div>
+          <div class="mtab-sepa"></div>
+          <div class="mtab-subt">FRONTEND DEVELOPER</div>
+          <div class="mtab-soci">
+            <i class="fa fa-facebook" aria-hidden="true"></i>
+            <i class="fa fa-twitter" aria-hidden="true"></i>
+            <i class="fa fa-linkedin" aria-hidden="true"></i>
+            <i class="fa fa-xing" aria-hidden="true"></i>
+            <i class="fa fa-github" aria-hidden="true"></i>
+          </div>
+        </div>
+      </div>
+    </md-tab>
+  </md-tab-group>
+  <div class="radio-group">
+    <md-radio-group [(ngModel)]="slideback">
+      <md-radio-button value="0"></md-radio-button>
+      <md-radio-button value="1"></md-radio-button>
+      <md-radio-button value="2"></md-radio-button>
+      <md-radio-button value="3"></md-radio-button>
+    </md-radio-group>
+  </div>
+</div>

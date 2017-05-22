@@ -1,0 +1,11 @@
+<form [formGroup]="loginForm" (ngSubmit)="doLogin($event)">
+  <md-input-container>
+    <input mdInput formControlName="email" type="email" placeholder="Email" email>
+    <small *ngIf="error_email">Email not correct</small>
+  </md-input-container>
+  <md-input-container>
+    <input mdInput formControlName="password" type="password" placeholder="Password">
+    <small *ngIf="error_password">Password not correct</small>
+  </md-input-container>
+  <button md-button type="submit">Log in</button>
+</form>
