@@ -1,17 +1,4 @@
-.main-bran {
-  margin-top: 100px;
-  padding-bottom: 80px;
-  background: url('/assets/slide/back01.jpg');
-  background-attachment: fixed;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-}
 .bran-cont{
-  display: -webkit-flex;
-  display: -moz-flex;
-  display: -ms-flex;
-  display: -o-flex;
   display: flex;
   align-items: center;
   flex-wrap: wrap;
@@ -30,15 +17,17 @@
 }
 .bran-item .tito{
   font-size: 25px;
-  margin-top: -20px;
 }
 .bran-item .subo{
   font-size: 18px;
   opacity: .8;
-  margin-top: -10px;
 }
 .bran-item .date{
   font-size: 14px;
   opacity: .6;
-  margin-top: -6px;
+}
+
+.radio-group{
+    text-align: center;
+    margin-top: 50px;
 }

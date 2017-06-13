@@ -1,0 +1,52 @@
+<md-dialog-content>
+  <form [formGroup]="work">
+    <div class="tool">
+      <md-spinner class="spinner" *ngIf="loading"></md-spinner>
+      <button md-icon-button class="uplo" *ngIf="!loading">
+        <md-icon>add_a_photo</md-icon>
+        <input type="file" name="file" accept="image/*|pdf" (change)="upPhoto($event)" multiple>
+      </button>
+      <md-slide-toggle formControlName="slider"> Slider</md-slide-toggle>
+      <button md-icon-button (click)="goDelete()"><md-icon>delete</md-icon></button>      
+    </div>
+    <div class="impu">
+      <md-input-container>
+        <input mdInput [mdDatepicker]="picker" placeholder="Date" formControlName="date">
+        <button mdSuffix [mdDatepickerToggle]="picker"></button>
+      </md-input-container>
+      <md-datepicker #picker></md-datepicker>
+      <md-input-container>
+        <input mdInput placeholder="Url" formControlName="url">
+      </md-input-container>
+      <md-input-container>
+        <input mdInput placeholder="Title" formControlName="title">
+      </md-input-container>
+      <md-input-container>
+        <input mdInput placeholder="Subtitle" formControlName="subtitle">
+      </md-input-container>
+      <md-input-container>
+        <input mdInput placeholder="Website" formControlName="website">
+      </md-input-container>
+      <md-select placeholder="Type" formControlName="type">
+        <md-option *ngFor="let type of worktype" [value]="type">{{ type }}</md-option>
+      </md-select>
+      <md-input-container>
+        <textarea mdInput rows="5" placeholder="Info" formControlName="info"></textarea>
+      </md-input-container>
+    </div>
+    <div class="uplo">
+      <!--<md-spinner class="spinner" *ngIf="loading"></md-spinner>-->
+      <!--<md-radio-group [(ngModel)]="cover">-->
+        <div class="imag" *ngFor="let photo of photos | async;">
+          <div class="head">
+            <md-radio-button class="cove" vlaue="photo.id" (click)="myCover(photo.id)">
+              <span>cover</span>
+            </md-radio-button>
+            <button md-icon-button (click)="imgDelete(photo)"><md-icon>delete</md-icon></button>      
+          </div>
+          <img src="{{baseurl}}work%2F{{photo.id}}?alt=media" alt="">
+        </div>
+      <!--</md-radio-group>-->
+    </div>
+  </form>
+</md-dialog-content>

@@ -16,11 +16,13 @@ footer .footer-top {
   text-align: left;
   font-size: 20px;
   display: flex;
+  flex-wrap: wrap;
 }
 footer .footer-block {
   margin-left: 10px;
   margin-right: 10px;
   flex: 1;
+  min-width: 300px;
 }
 footer h4 {
   border-bottom: 1px dotted white;
@@ -45,18 +47,19 @@ footer form {
 }
 footer form input {
   padding: 10px;
-  font-size: 16px;
+  font-size: 15px;
   margin-bottom: 10px;
   border-radius: 3px;
   border: none;
 }
 footer form textarea {
-  height: 120px;
+  height: 95px;
   padding: 10px;
-  font-size: 16px;
+  font-size: 15px;
   margin-bottom: 10px;
   resize: none;
   border-radius: 3px;
+  background-color: rgba(255, 255, 255, 0.8);
 }
 footer form button {
   background-color: black;
@@ -82,7 +85,12 @@ footer .footer-bottom .container {
   justify-content: space-between;
   padding-top: 15px;
   padding-bottom: 15px;
+  flex-wrap: wrap;
+  align-items: center;
 }  
+footer .footer-bottom .container .privacy{
+  font-size: 15px;
+}
 footer .footer-bottom .container i {
   text-align: center;
   color: white;
@@ -100,4 +108,17 @@ footer .footer-bottom .container i {
   border: 1px solid rgba(255, 255, 255, 0.4);
   border-radius: 5px;
   zoom: .8;
+}
+
+
+@media (max-width: 700px) {
+
+  footer .footer-bottom .container .privacy{
+    display: none;
+  }
+  footer .footer-bottom .container .social{
+    margin: auto;
+  }
+
+
 }

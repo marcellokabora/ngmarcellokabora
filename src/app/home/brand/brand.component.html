@@ -1,32 +1,84 @@
 <div class="main-bran">
-  <div class="main-tito white">
-    <span class="tito">COMPANY</span>
-    <span class="subo">In the last 10 years of careers i worked for different company.</span>
-  </div>
-  <div class="bran-cont container">
-    <div class="bran-item">
-      <a href="https://www.smava.de/" target="_blank">
-        <img src="assets/brand/smava.png" alt="">
-        <div class="tito">Smava Das Online</div>
-        <div class="subo">Frontend Developer</div>
-        <div class="date">8 Months in 2016</div>
-      </a>
-    </div>
-    <div class="bran-item">
-      <a href="https://www.smava.de/" target="_blank">
-        <img src="assets/brand/maggiolino.png" alt="">
-        <div class="tito">Smava Das Online</div>
-        <div class="subo">Frontend Developer</div>
-        <div class="date">8 Months in 2016</div>
-      </a>
-    </div>
-    <div class="bran-item">
-      <a href="https://www.smava.de/" target="_blank">
-        <img src="assets/brand/tanglang.png" alt="">
-        <div class="tito">Smava Das Online</div>
-        <div class="subo">Frontend Developer</div>
-        <div class="date">8 Months in 2016</div>
-      </a>
+  <div class="container">
+    <md-tab-group selectedIndex="{{slideback}}">
+      <md-tab class="mtab">
+        <div class="bran-cont">
+          <div class="bran-item">
+            <a href="https://www.mineko.de/" target="_blank">
+              <img src="assets/brand/mineko.png" alt="">
+              <div class="tito">Mineko</div>
+              <div class="subo">Senior Developer</div>
+              <div class="date">5 Months in 2017</div>
+            </a>
+          </div>
+          <div class="bran-item">
+            <a href="https://www.smava.de/" target="_blank">
+              <img src="assets/brand/smava.png" alt="">
+              <div class="tito">Smava</div>
+              <div class="subo">Frontend Developer</div>
+              <div class="date">8 Months in 2016</div>
+            </a>
+          </div>
+          <div class="bran-item">
+            <a href="http://libreriamaggiolino.com/" target="_blank">
+              <img src="assets/brand/maggiolino.png" alt="">
+              <div class="tito">Libreria Maggiolino</div>
+              <div class="subo">Web Master</div>
+              <div class="date">10 Months in 2015</div>
+            </a>
+          </div>
+          <div class="bran-item">
+            <a href="https://www.smava.de/" target="_blank">
+              <img src="assets/brand/tanglang.png" alt="">
+              <div class="tito">Tang Lang Viaggi</div>
+              <div class="subo">Developer Designer</div>
+              <div class="date">16 Months in 2014</div>
+            </a>
+          </div>
+        </div>
+      </md-tab>
+      <md-tab class="mtab">
+        <div class="bran-cont">
+          <div class="bran-item">
+            <a href="https://www.smava.de/" target="_blank">
+              <img src="assets/brand/annunci.png" alt="">
+              <div class="tito">Annuci Animali</div>
+              <div class="subo">Frontend Develoepr</div>
+              <div class="date">10 Months in 2014</div>
+            </a>
+          </div>
+          <div class="bran-item">
+            <a href="https://www.smava.de/" target="_blank">
+              <img src="assets/brand/airesis.png" alt="">
+              <div class="tito">Airesis</div>
+              <div class="subo">Ui/Ux Designer</div>
+              <div class="date">6 Months in 2013</div>
+            </a>
+          </div>
+          <div class="bran-item">
+            <a href="https://www.smava.de/" target="_blank">
+              <img src="assets/brand/shipchandler.png" alt="">
+              <div class="tito">Thomas Shipchandler</div>
+              <div class="subo">Frontend Developer</div>
+              <div class="date">6 Months in 2012</div>
+            </a>
+          </div>
+          <div class="bran-item">
+            <a href="https://www.smava.de/" target="_blank">
+              <img src="assets/brand/comunica.png" alt="">
+              <div class="tito">Comunica Srl</div>
+              <div class="subo">Frontend Developer</div>
+              <div class="date">4 Months in 2010</div>
+            </a>
+          </div>
+        </div>
+      </md-tab>
+    </md-tab-group>
+    <div class="radio-group">
+      <md-radio-group [(ngModel)]="slideback">
+        <md-radio-button value="0"></md-radio-button>
+        <md-radio-button value="1"></md-radio-button>
+      </md-radio-group>
     </div>
   </div>
 </div>

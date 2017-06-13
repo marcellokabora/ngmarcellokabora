@@ -6,12 +6,13 @@
 export const environment = {
   production: false,
   firebase : {
-    apiKey: "AIzaSyBsQQpbgYFYWDyEcOSGoPRsOi4l1g01kCM",
-    authDomain: "salvoiacono-5232e.firebaseapp.com",
-    databaseURL: "https://salvoiacono-5232e.firebaseio.com",
-    projectId: "salvoiacono-5232e",
-    storageBucket: "salvoiacono-5232e.appspot.com",
-    messagingSenderId: "301611604670"
+    apiKey: "AIzaSyDBRUWFzB0kevgdw1yfXYcehGVhqQNVpdg",
+    authDomain: "marcellokabora-80ff9.firebaseapp.com",
+    databaseURL: "https://marcellokabora-80ff9.firebaseio.com",
+    projectId: "marcellokabora-80ff9",
+    storageBucket: "marcellokabora-80ff9.appspot.com",
+    messagingSenderId: "715645246518"
   },
-  baseurl: 'https://firebasestorage.googleapis.com/v0/b/salvoiacono-5232e.appspot.com/o/'
+  baseurl: 'https://firebasestorage.googleapis.com/v0/b/marcellokabora-80ff9.appspot.com/o/',
+  worktype : ["website","design","logo","flayer","book"],
 };

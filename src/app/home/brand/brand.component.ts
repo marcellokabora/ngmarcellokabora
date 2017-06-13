@@ -7,6 +7,8 @@ import { Component, OnInit } from '@angular/core';
 })
 export class BrandComponent implements OnInit {
 
+  slideback = 0;
+
   constructor() { }
 
   ngOnInit() {

@@ -1,34 +1,104 @@
-.work-cover{
+.work{
+    min-height: 100vh;
+}
+.cover{
     height: 300px;
     text-align: center;
-    h1{
-        font-family: 'Racing Sans One', cursive;
+    .back{
+        position: absolute;
+        height: 300px;
+        width: 100%;
+        z-index: 0;
+        filter: brightness(80%) blur(2px);
+    }
+    .info{
+        position: relative;
+        z-index: 2;
+        text-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
         color: white;
-        padding-top: 150px;
-        font-size: 50px;
-        margin: 0;
+        padding-top: 110px;
+        .tito{
+            font-size: 50px;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+            padding-left: 20px;
+            padding-right: 20px;
+        }
+        .subo{
+            color: white;
+            font-size: 25px;
+            display: block;
+            margin-top: 7px;
+            opacity: .7;
+        }
+    }
+    .setting{
+        position: absolute;
+        top: 244px;
+        right: 20px;
+        z-index: 1;
+        color: white;
     }
 }
-.work-cont{
+.container{
     display: flex;
+    flex-direction: column;
     margin-top: 20px;
-    .work-slid{
-        padding: 20px;
+    margin-bottom: 50px;
+    .mat-tab-group{
+        width: 100%;
+    }
+    .sidel{
         flex: 2;
         display: flex;
         flex-direction: column;
-        align-items: center;
-        img{
-            width: 100%;
+        .slide{
+            padding: 20px;
+            text-align: center;
+            img{
+                width: 100%;
+            }
+            .radio-group{
+            }
         }
-        .radio-group{
-            margin-top: -40px;
-            z-index: 1;
+        .data{
+            text-align: left;
+            padding-left: 20px;
+            p{
+                display: flex;
+                align-items: center;
+                .mat-icon{
+                    padding-right: 10px;
+                }
+            }
         }
     }
-    .work-info{
-        padding-left: 20px;
-        padding-right: 20px;
+    .sider{
         flex: 3;
+        .info{
+            padding-left: 20px;
+            padding-right: 20px;
+        }
     }
 }
+
+@media (max-width: 1000px) {
+    .cover{
+        .back{
+            height: 200px;
+        }
+        .info{
+            padding-top: 40px;
+            zoom: .8;
+        }
+    }
+    .container{
+        flex-direction: column;
+        .sidel{
+            order: 2;
+        }
+        .sider{
+            order: 1;
+        }
+    }
+}
+

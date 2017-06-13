@@ -1,4 +1,3 @@
-
 .main-slide .mtab-cont {
   display: flex;
   justify-content: center;
@@ -7,6 +6,13 @@
   flex-direction: column;
   height: 600px;
   position: relative;
+  overflow: hidden;
+  .setting{
+    position: absolute;
+    color: white;
+    right: 20px;
+    top: 73px;
+  }
 }
 .main-slide:hover .butt-left,
 .main-slide:hover .butt-righ{
@@ -44,25 +50,25 @@
   position: absolute;
   height: 100%;
   width: 100%;
-  background: url('/assets/marcellokabora.jpg');
+  background: url('/assets/slide/marcellokabora.jpg');
   background-attachment: fixed;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
   padding-top: 20px;
-  z-index: -2;
-}
-.main-slide .mtab-info {
-/*  opacity: .8;*/
+  z-index: -1;
+  filter: blur(2px) brightness(80%);
+  cursor: pointer;
 }
 .main-slide .mtab-tito {
-  font-family: 'Racing Sans One', cursive;
+  font-weight: bold;
   color: rgba(255, 255, 255, 0.9);
   font-size: 8vh;
   text-shadow: 2px 1px 5px rgba(0, 0, 0, 0.2);
   padding-left: 20px;
   padding-right: 20px;
   margin-top:20px;
+  cursor: pointer;
 }
 .main-slide .mtab-sepa {
   height: 1px;
@@ -77,6 +83,7 @@
   font-size: 30px;
   margin-bottom: 40px;
   opacity: .6;
+  cursor: pointer;
 }
 .main-slide .mtab-soci i {
   color: white;
@@ -85,8 +92,8 @@
   opacity: .8;
   cursor: pointer;
   transition: opacity .5s;
-  margin-left: 10px;
-  margin-right: 10px;
+  margin-left: 5px;
+  margin-right: 5px;
   height: 35px;
   width: 35px;
   line-height: 35px;
@@ -98,7 +105,7 @@
 /*  opacity: 1;*/
 }
 .main-slide .radio-group {
-  margin-top: -40px;
+  margin-top: -50px;
   height: 100px;
   display: flex;
   justify-content: center;

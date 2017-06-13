@@ -1,79 +1,74 @@
-
 <div class="main-skil">
   <div class="main-cont">
-    
-    <div class="main-tito">
-      <span class="tito">KNOWLEDGE</span>
-      <span class="subo">My passion for the web allow me to use different codes for design something unique and special.</span>
-    </div>
-    
     <div class="skil-cont">
-
       <div class="skil-rows">
         <div class="skil-tito">
-          <span>STYLE {{skill_style.length}}</span>
+          <span>{{skill_software.length}} SOFTWARE</span>
+        </div>
+        <i class="material-icons butt-righ">chevron_right</i>
+        <div class="skil-info">
+          <div class="skil-item" *ngFor="let skill of skill_software">
+            <a href="{{skill.link}}" target="_blank">
+              <img src="assets/skill/{{skill.name}}.png" alt="">
+              <div class="item-tito">
+                <span class="tito">{{skill.name}}</span>
+                <span class="perc">{{skill.percent}}%</span>
+              </div>
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="skil-rows">
+        <div class="skil-tito">
+          <span>{{skill_style.length}} STYLE</span>
         </div>
         <i class="material-icons butt-righ">chevron_right</i>   
         <div class="skil-info">
           <div class="skil-item" *ngFor="let skill of skill_style">
-            <img src="assets/skill/{{skill.name}}.png" alt="">
-            <div class="item-tito">
-              <span class="tito">{{skill.name}}</span>
-              <span class="perc">{{skill.percent}}%</span>
-            </div>
+            <a href="{{skill.link}}" target="_blank">
+              <img src="assets/skill/{{skill.name}}.png" alt="">
+              <div class="item-tito">
+                <span class="tito">{{skill.name}}</span>
+                <span class="perc">{{skill.percent}}%</span>
+              </div>
+            </a>
           </div>
         </div>
       </div>
-
       <div class="skil-rows">
         <div class="skil-tito">
-          <span>STYLE {{skill_style.length}}</span>
+          <span>{{skill_script.length}} CORE</span>
         </div>
         <i class="material-icons butt-righ">chevron_right</i>   
         <div class="skil-info">
-          <div class="skil-item" *ngFor="let skill of skill_style">
+          <div class="skil-item" *ngFor="let skill of skill_script">
+            <a href="{{skill.link}}" target="_blank">
             <img src="assets/skill/{{skill.name}}.png" alt="">
-            <div class="item-tito">
-              <span class="tito">{{skill.name}}</span>
-              <span class="perc">{{skill.percent}}%</span>
-            </div>
+              <div class="item-tito">
+                <span class="tito">{{skill.name}}</span>
+                <span class="perc">{{skill.percent}}%</span>
+              </div>
+            </a>
           </div>
         </div>
       </div>
-
       <div class="skil-rows">
         <div class="skil-tito">
-          <span>STYLE {{skill_style.length}}</span>
+          <span>{{skill_database.length}} DATABASE</span>
         </div>
         <i class="material-icons butt-righ">chevron_right</i>   
         <div class="skil-info">
-          <div class="skil-item" *ngFor="let skill of skill_style">
-            <img src="assets/skill/{{skill.name}}.png" alt="">
-            <div class="item-tito">
-              <span class="tito">{{skill.name | uppercase}}</span>
-              <span class="perc">{{skill.percent}}%</span>
-            </div>
+          <div class="skil-item" *ngFor="let skill of skill_database">
+            <a href="{{skill.link}}" target="_blank">
+              <img src="assets/skill/{{skill.name}}.png" alt="">
+              <div class="item-tito">
+                <span class="tito">{{skill.name | uppercase}}</span>
+                <span class="perc">{{skill.percent}}%</span>
+              </div>
+            </a>
           </div>
         </div>
-      </div>
-
-      <div class="skil-rows">
-        <div class="skil-tito">
-          <span>STYLE {{skill_style.length}}</span>
-        </div>
-        <i class="material-icons butt-righ">chevron_right</i>   
-        <div class="skil-info">
-          <div class="skil-item" *ngFor="let skill of skill_style">
-            <img src="assets/skill/{{skill.name}}.png" alt="">
-            <div class="item-tito">
-              <span class="tito">{{skill.name | uppercase}}</span>
-              <span class="perc">{{skill.percent}}%</span>
-            </div>
-          </div>
-        </div>
-      </div>
-      
-  
+      </div>      
     </div>
   </div>
 </div>

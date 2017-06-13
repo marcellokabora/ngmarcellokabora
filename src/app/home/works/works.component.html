@@ -1,138 +1,51 @@
-
 <div class="main-work">
-  <div class="main-tito">
-    <span class="tito">WORKS</span>
-    <span class="subo">Here a collection of all my best projects divided for category.</span>
-  </div>
-
   <div class="butt-togg">
-    <!--<span>Filter :</span>-->
-    <md-button-toggle-group #group="mdButtonToggleGroup" >
-      <md-button-toggle value="all" mdTooltip="All" mdTooltipPosition="below" checked="true">
-        <md-icon>select_all</md-icon>
+    <md-button-toggle-group #group="mdButtonToggleGroup">
+      <md-button-toggle value="all" mdTooltip="All" mdTooltipPosition="below" checked="true" (click)="filterBy(undefined)">
+        <md-icon>work</md-icon>
       </md-button-toggle>
-      <md-button-toggle value="website" mdTooltip="Website" mdTooltipPosition="below">
-        <md-icon>web</md-icon>
+      <md-button-toggle value="website" mdTooltip="Website" mdTooltipPosition="below" (click)="filterBy('website')">
+        <md-icon>laptop_chromebook</md-icon>
       </md-button-toggle>
-      <md-button-toggle value="right">
-        <md-icon>format_align_right</md-icon>
+      <md-button-toggle value="right" mdTooltip="Design" mdTooltipPosition="below" (click)="filterBy('design')">
+        <md-icon>invert_colors</md-icon>
       </md-button-toggle>
-      <md-button-toggle value="justify">
-        <md-icon>format_align_justify</md-icon>
+      <md-button-toggle value="right" mdTooltip="Logo" mdTooltipPosition="below" (click)="filterBy('logo')">
+        <md-icon>extension</md-icon>
+      </md-button-toggle>
+      <md-button-toggle value="justify" mdTooltip="Book" mdTooltipPosition="below" (click)="filterBy('book')">
+        <md-icon>import_contacts</md-icon>
       </md-button-toggle>
     </md-button-toggle-group>
   </div>
-  
-  <div class="work-cont container">
-    
-    <div class="work-item">
-      <div class="work-item-cont">
-        <div class="tito">WAKAMOK AWAK AMOKA</div>
+  <div class="container">
+
+     <masonry>
+       <masonry-brick class="work-item" *ngFor="let work of works | async">
+         <div class="item-cont">
+          <div class="cont-item">
+            <img src="{{baseurl}}work%2F{{work.cover}}?alt=media" alt="" routerLink="/{{work.url}}">
+            <div class="tito" routerLink="/{{work.url}}">{{work.title}}</div>
+            <div class="view">
+              <i class="material-icons" mdTooltip="ZOOM" mdTooltipPosition="below" (click)="zoomWork(work.$key)">zoom_in</i>
+              <i class="material-icons" routerLink="/{{work.url}}" mdTooltip="LINK" mdTooltipPosition="below">link</i>
+              <i class="material-icons" *ngIf="login" (click)="goWork(work.$key)" mdTooltip="SETTING" mdTooltipPosition="below">settings</i>
+            </div>
+          </div>
+        </div>
+       </masonry-brick>
+     </masonry>
+
+
+    <!--<div class="work-item" *ngFor="let work of works | async">
+      <div class="work-item-cont" [ngStyle]="{'background': 'silver url(' + ) center / cover'}">
+        <div class="tito" routerLink="/{{work.url}}">{{work.title}}</div>
         <div class="view">
-          <i class="material-icons">zoom_in</i>
-          <i class="material-icons">link</i>
+          <i class="material-icons" mdTooltip="ZOOM" mdTooltipPosition="below" (click)="zoomWork(work.$key)">zoom_in</i>
+          <i class="material-icons" routerLink="/{{work.url}}" mdTooltip="LINK" mdTooltipPosition="below">link</i>
+          <i class="material-icons" *ngIf="login" (click)="goWork(work.$key)" mdTooltip="SETTING" mdTooltipPosition="below">settings</i>
         </div>
       </div>
-    </div>
-    <div class="work-item">
-      <div class="work-item-cont">
-        <div class="tito">WAKAMOKA</div>
-        <div class="view">
-          <i class="material-icons">zoom_in</i>
-          <i class="material-icons">link</i>
-        </div>
-      </div>
-    </div>
-    <div class="work-item">
-      <div class="work-item-cont">
-        <div class="tito">WAKAMOKA</div>
-        <div class="view">
-          <i class="material-icons">zoom_in</i>
-          <i class="material-icons">link</i>
-        </div>
-      </div>
-    </div>
-    <div class="work-item">
-      <div class="work-item-cont">
-        <div class="tito">WAKAMOKA</div>
-        <div class="view">
-          <i class="material-icons">zoom_in</i>
-          <i class="material-icons">link</i>
-        </div>
-      </div>
-    </div>
-    <div class="work-item">
-      <div class="work-item-cont">
-        <div class="tito">WAKAMOKA</div>
-        <div class="view">
-          <i class="material-icons">zoom_in</i>
-          <i class="material-icons">link</i>
-        </div>
-      </div>
-    </div>
-    <div class="work-item">
-      <div class="work-item-cont">
-        <div class="tito">WAKAMOKA</div>
-        <div class="view">
-          <i class="material-icons">zoom_in</i>
-          <i class="material-icons">link</i>
-        </div>
-      </div>
-    </div>
-    <div class="work-item">
-      <div class="work-item-cont">
-        <div class="tito">WAKAMOKA</div>
-        <div class="view">
-          <i class="material-icons">zoom_in</i>
-          <i class="material-icons">link</i>
-        </div>
-      </div>
-    </div>
-    <div class="work-item">
-      <div class="work-item-cont">
-        <div class="tito">WAKAMOKA</div>
-        <div class="view">
-          <i class="material-icons">zoom_in</i>
-          <i class="material-icons">link</i>
-        </div>
-      </div>
-    </div>
-    <div class="work-item">
-      <div class="work-item-cont">
-        <div class="tito">WAKAMOKA</div>
-        <div class="view">
-          <i class="material-icons">zoom_in</i>
-          <i class="material-icons">link</i>
-        </div>
-      </div>
-    </div>
-    <div class="work-item">
-      <div class="work-item-cont">
-        <div class="tito">WAKAMOKA</div>
-        <div class="view">
-          <i class="material-icons">zoom_in</i>
-          <i class="material-icons">link</i>
-        </div>
-      </div>
-    </div>
-    <div class="work-item">
-      <div class="work-item-cont">
-        <div class="tito">WAKAMOKA</div>
-        <div class="view">
-          <i class="material-icons">zoom_in</i>
-          <i class="material-icons">link</i>
-        </div>
-      </div>
-    </div>
-    <div class="work-item">
-      <div class="work-item-cont">
-        <div class="tito">WAKAMOKA</div>
-        <div class="view">
-          <i class="material-icons">zoom_in</i>
-          <i class="material-icons">link</i>
-        </div>
-      </div>
-    </div>
-    
+    </div>-->
   </div>
 </div>

@@ -1,11 +1,12 @@
 .main-skil {
   text-align: center;
+  padding-bottom: 80px;
+}
+.skil-cont{
+  margin-top: 60px;
+  position: relative;
 }
 .skil-rows{
-  display: -webkit-flex;
-  display: -moz-flex;
-  display: -ms-flex;
-  display: -o-flex;
   display: flex;
   align-items: center;
   position: relative;
@@ -20,9 +21,6 @@
   padding-left: 20px;
   width: 120px;
 }
-.skil-cont{
-  margin-top: 60px;
-}
 .skil-rows .butt-righ{
   position: absolute;
   right: 0;
@@ -36,14 +34,9 @@
   height: 150px;
   flex: 4;
   margin-right: 40px;
-  display: -webkit-flex;
-  display: -moz-flex;
-  display: -ms-flex;
-  display: -o-flex;
   display: flex;
   flex-wrap: nowrap;
   overflow: auto;
-//   overflow-x:hidden;
   overflow-y:hidden;
   border-top: 1px solid silver;
 }
@@ -54,10 +47,13 @@
   border-top: none;
 }
 .skil-item{
-//   border-right: 1px solid silver;
   font-weight: bold;
   padding: 20px;
   padding-top: 20px;
+  a{
+    color: black;
+    text-decoration: none;
+  }
 }
 .skil-item img{
   height: 80px;

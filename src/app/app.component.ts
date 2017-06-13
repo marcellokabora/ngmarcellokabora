@@ -2,7 +2,8 @@ import { Component } from '@angular/core';
 import { MdDialog, MdDialogConfig, MdSnackBar } from "@angular/material";
 import { AngularFireAuth } from 'angularfire2/auth';
 
-import { LoginComponent } from './login/login.component';
+import { FormLoginComponent } from './form/form-login/form-login.component';
+import { FormWorkComponent } from './form/form-work/form-work.component';
 
 @Component({
   selector: 'app-root',
@@ -19,17 +20,27 @@ export class AppComponent {
     public snackBar: MdSnackBar
   ) { 
     afAuth.authState.subscribe(log => {
-      // if(log) {
-      //   this.imlogin=true;
-      // } else {
-      //   this.imlogin=false;
-      // }
+      if(log) {
+        this.imlogin=true;
+      } else {
+        this.imlogin=false;
+      }
     });
   }
 
   goLogin() {
     const config = new MdDialogConfig();
-    this.dialog.open(LoginComponent, config);
+    this.dialog.open(FormLoginComponent, config);
+  }
+  goLogout(){
+    this.afAuth.auth.signOut();
+    this.snackBar.open('SEE YOU LATER', '', {
+      duration: 2000,
+    });
+  }
+  goWork(){
+    let config: MdDialogConfig = { disableClose: false, data: {} };
+    this.dialog.open(FormWorkComponent, config);
   }
   
 }

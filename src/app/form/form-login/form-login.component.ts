@@ -6,10 +6,10 @@ import * as firebase from 'firebase/app';
 
 @Component({
   selector: 'app-form-login',
-  templateUrl: './login.component.html',
-  styleUrls: ['./login.component.scss']
+  templateUrl: './form-login.component.html',
+  styleUrls: ['./form-login.component.scss']
 })
-export class LoginComponent implements OnInit {
+export class FormLoginComponent implements OnInit {
 
   submitted:boolean;
   error_email:boolean;

@@ -1,31 +1,38 @@
-<div class="work-cover"  [ngStyle]="{'background': 'url(' + 'assets/slide/back01.jpg' + ') center / cover'}">
-  <h1>Marcello Kabora</h1>
-</div>
-
-<div class="work-cont container">
-  <div class="work-slid">
-    <md-tab-group selectedIndex="{{slideback}}">
-      <md-tab>
-        <img src="assets/slide/back01.jpg" alt="">
-      </md-tab>
-      <md-tab>
-        <img src="assets/slide/back02.jpg" alt="">
-      </md-tab>
-      <md-tab>
-        <img src="assets/slide/back03.jpg" alt="">
-      </md-tab>
-    </md-tab-group>
-    <md-radio-group class="radio-group" [(ngModel)]="slideback">
-      <md-radio-button value="0"></md-radio-button>
-      <md-radio-button value="1"></md-radio-button>
-      <md-radio-button value="2"></md-radio-button>
-    </md-radio-group>
+<div class="work">
+  <div *ngFor="let work of works | async; let i = index">
+    <div *ngIf="i==0">
+      <div class="cover">
+        <div class="back" [ngStyle]="{'background': 'silver url(' + baseurl + 'work%2F' + work.cover + '?alt=media) center / cover'}"></div>
+        <div class="info">
+          <span class="tito">{{ work.title }}</span>
+          <span class="subo">{{work.subtitle}}</span>
+        </div>
+        <button class="setting" md-icon-button *ngIf="login" (click)="goWork(work.$key)"><md-icon>settings</md-icon></button>
+      </div>
+      <div class="container">
+        <div class="sidel">          
+          <div class="slide">
+            <md-radio-group class="radio-group" [(ngModel)]="slideback">
+              <md-radio-button *ngFor="let photo of photos | async; let i = index" value="{{i}}"></md-radio-button>
+            </md-radio-group>
+            <br><br>
+            <md-tab-group selectedIndex="{{slideback}}">
+              <md-tab *ngFor="let photo of photos | async; let i = index">
+                <img src="{{baseurl}}work%2F{{photo.id}}?alt=media" alt="">
+              </md-tab>
+            </md-tab-group>
+          </div>
+          <div class="data">
+            <p><md-icon>date_range</md-icon>{{work.date | date}}
+            <p *ngIf="work.website"><md-icon>link</md-icon><a href="{{work.website}}" target="_blank">{{work.website}}</a></p>
+          </div>
+        </div>
+        <div class="sider">
+          <div class="info">
+            <div [innerHTML]="work.info | safe: 'html'"></div>
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
-  <div class="work-info">
-    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged</p>
-    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged</p>
-  </div>
 </div>
-
-
-<br><br><br><br><br><br><br><br><br><br><br><br><br><br>

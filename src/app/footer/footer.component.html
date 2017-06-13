@@ -21,10 +21,9 @@
       <div class="footer-block">
         <h4>Message</h4>
         <div class="footer-cont">
-          <form>
-            <input placeholder="Email" value="">
-            <textarea placeholder="Message"></textarea>
-            <button>INVIO</button>
+          <form [formGroup]="messForm" (ngSubmit)="goMess($event)">
+            <textarea placeholder="Message" formControlName="message"></textarea>
+            <button md-button type="submit" *ngIf="messForm.valid">INVIO</button>
           </form>
         </div>
       </div>
@@ -36,11 +35,12 @@
         Privacy - Copyright - Service
       </div>
       <div class="social">
-        <i class="fa fa-facebook" aria-hidden="true"></i>
-        <i class="fa fa-twitter" aria-hidden="true"></i>
-        <i class="fa fa-linkedin" aria-hidden="true"></i>
-        <i class="fa fa-xing" aria-hidden="true"></i>
-        <i class="fa fa-github" aria-hidden="true"></i>
+        <a href="https://www.facebook.com/marcellokabora" target="_blank"><i class="fa fa-facebook" aria-hidden="true"></i></a>
+        <a href="https://twitter.com/marcellokabora" target="_blank"><i class="fa fa-twitter" aria-hidden="true"></i></a>
+        <a href="https://www.linkedin.com/in/marcellokabora" target="_blank"><i class="fa fa-linkedin" aria-hidden="true"></i></a>
+        <a href="https://www.xing.com/profile/Marcello_Kabora" target="_blank"><i class="fa fa-xing" aria-hidden="true"></i></a>
+        <a href="https://github.com/marcellokabora" target="_blank"><i class="fa fa-github" aria-hidden="true"></i></a>
+        <a href="skype:marcellokabora?add"><i class="fa fa-skype" aria-hidden="true"></i></a>
       </div>
     </div>
   </div>
