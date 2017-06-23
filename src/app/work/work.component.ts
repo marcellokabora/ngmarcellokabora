@@ -23,6 +23,7 @@ export class WorkComponent implements OnInit {
   baseurl = environment.baseurl;
   workid;
   workey;
+  photolenght:number;
 
   constructor(
     private db: AngularFireDatabase,
@@ -42,6 +43,7 @@ export class WorkComponent implements OnInit {
     this.works.subscribe(items => {
       this.workey = items[0].$key;
       this.photos = db.list('/work/'+this.workey+'/photo');
+      this.photos.subscribe(snapshots => {this.photolenght = snapshots.length});
     });
 
   }
@@ -58,6 +60,14 @@ export class WorkComponent implements OnInit {
   goZoom(id){
     let config: MdDialogConfig = { disableClose: false, data: {id: this.workey} };
     this.dialog.open(ZoomComponent, config);
+  }
+
+  goImg(){
+    if(this.slideback==this.photolenght-1){
+      this.slideback = 1;
+    }else{
+      this.slideback+=1;
+    }
   }
 
 }

@@ -19,8 +19,7 @@
     </md-button-toggle-group>
   </div>
   <div class="container">
-
-     <masonry>
+      <masonry [useImagesLoaded]="true">
        <masonry-brick class="work-item" *ngFor="let work of works | async">
          <div class="item-cont">
           <div class="cont-item">
@@ -35,17 +34,5 @@
         </div>
        </masonry-brick>
      </masonry>
-
-
-    <!--<div class="work-item" *ngFor="let work of works | async">
-      <div class="work-item-cont" [ngStyle]="{'background': 'silver url(' + ) center / cover'}">
-        <div class="tito" routerLink="/{{work.url}}">{{work.title}}</div>
-        <div class="view">
-          <i class="material-icons" mdTooltip="ZOOM" mdTooltipPosition="below" (click)="zoomWork(work.$key)">zoom_in</i>
-          <i class="material-icons" routerLink="/{{work.url}}" mdTooltip="LINK" mdTooltipPosition="below">link</i>
-          <i class="material-icons" *ngIf="login" (click)="goWork(work.$key)" mdTooltip="SETTING" mdTooltipPosition="below">settings</i>
-        </div>
-      </div>
-    </div>-->
   </div>
 </div>

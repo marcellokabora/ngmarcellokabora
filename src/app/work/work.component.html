@@ -18,7 +18,7 @@
             <br><br>
             <md-tab-group selectedIndex="{{slideback}}">
               <md-tab *ngFor="let photo of photos | async; let i = index">
-                <img src="{{baseurl}}work%2F{{photo.id}}?alt=media" alt="">
+                <img src="{{baseurl}}work%2F{{photo.id}}?alt=media" alt="" (click)="goImg()">
               </md-tab>
             </md-tab-group>
           </div>

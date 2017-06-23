@@ -1,0 +1,22 @@
+<div class="page-cover">
+    <div class="back"></div>
+    <div class="main-tito white page">
+        <span class="tito">HISTORY</span>
+        <span class="subo">In the last 10 years of careers i worked for different company.</span>
+    </div>
+</div>
+<div class="container">
+  <div class="brand" *ngFor="let item of story | async">
+    <div class="brandl">
+      <a href="{{item.link}}" target="_black">
+        <img src="assets/brand/{{item.name}}.png" alt="">
+        <div class="tito"><span>{{item.name}}</span> - {{item.subo}}</div>
+      </a>
+      <div class="date">{{item.date}}</div>
+    </div>
+    <div class="brandr">
+      <div class="tipo">{{item.tipo}}</div>
+      <div class="info" [innerHTML]="item.info | safe: 'html'"></div>
+    </div>
+  </div>
+</div>

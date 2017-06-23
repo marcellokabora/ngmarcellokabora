@@ -14,9 +14,11 @@ import { FormWorkComponent } from '../../form/form-work/form-work.component';
 export class SlideComponent implements OnInit {
 
   slideback:number=0;
+  slidebacklenght=0;
   works: FirebaseListObservable<any>;
   baseurl = environment.baseurl;
   login:boolean;
+  interval;
 
   constructor(
     private db: AngularFireDatabase,
@@ -32,9 +34,20 @@ export class SlideComponent implements OnInit {
         equalTo: true
       }
     })
+
    }
 
   ngOnInit() {
+    this.interval = setInterval(() => {
+      this.slideback+=1;
+      if(this.slideback == 7){
+        this.slideback = 0;
+      }
+    }, 5000);
+  }
+
+  noInterval(){
+    clearInterval(this.interval);
   }
 
   goWork(id){

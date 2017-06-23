@@ -56,6 +56,7 @@
             text-align: center;
             img{
                 width: 100%;
+                cursor: pointer;
             }
             .radio-group{
             }
@@ -81,23 +82,28 @@
     }
 }
 
-@media (max-width: 1000px) {
+@media (max-width: 600px) {
     .cover{
         .back{
-            height: 200px;
+            height: 250px;
         }
         .info{
-            padding-top: 40px;
             zoom: .8;
+            .subo{
+                display: none;
+            }
         }
     }
     .container{
         flex-direction: column;
+        margin-bottom: 0px;
         .sidel{
-            order: 2;
+            margin-bottom: 0px;
+            .slide{
+                display: none;
+            }
         }
         .sider{
-            order: 1;
         }
     }
 }

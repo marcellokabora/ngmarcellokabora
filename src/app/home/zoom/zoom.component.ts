@@ -10,10 +10,12 @@ import { MdDialog, MdDialogRef, MdDialogConfig, MD_DIALOG_DATA} from '@angular/m
 })
 export class ZoomComponent implements OnInit {
 
-  slideback:number=0;
+  slideback:number=1;
   photos: FirebaseListObservable<any>;
   baseurl = environment.baseurl;
   workid;
+  photolenght:number;
+
 
   constructor(
     private db: AngularFireDatabase,
@@ -24,9 +26,19 @@ export class ZoomComponent implements OnInit {
     if(data.id){
       this.workid=data.id;
       this.photos = db.list('/work/'+this.workid+'/photo');
+      this.photos.subscribe(snapshots => {this.photolenght = snapshots.length});
     }
 
   }
+
+  goImg(){
+    if(this.slideback==this.photolenght-1){
+      this.slideback = 1;
+    }else{
+      this.slideback+=1;
+    }
+  }
+
 
   ngOnInit() {
   }

@@ -1,8 +1,7 @@
-<!--<h2 md-dialog-title>Delete all</h2>-->
 <md-dialog-content>
   <md-tab-group selectedIndex="{{slideback}}">
     <md-tab class="mtab" *ngFor="let photo of photos | async">
-      <img class="image" src="{{baseurl}}work%2F{{photo.id}}?alt=media" alt="">
+      <img class="image" src="{{baseurl}}work%2F{{photo.id}}?alt=media" alt="" (click)="goImg()">
     </md-tab>
   </md-tab-group>
   <div class="radio-group">
@@ -11,8 +10,3 @@
     </md-radio-group>
   </div>
 </md-dialog-content>
-<!--<md-dialog-actions>
-  <button md-button md-dialog-close>No</button>
-  <button md-button>Yes</button>
-</md-dialog-actions>-->
-

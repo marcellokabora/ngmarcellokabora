@@ -34,8 +34,8 @@
   </md-tab-group>
   <div class="radio-group">
     <md-radio-group [(ngModel)]="slideback">
-      <md-radio-button value="0"></md-radio-button>
-      <md-radio-button *ngFor="let work of works | async; let i = index" value="{{i+1}}"></md-radio-button>
+      <md-radio-button value="0" (click)="noInterval()"></md-radio-button>
+      <md-radio-button *ngFor="let work of works | async; let i = index" value="{{i+1}}" (click)="noInterval()"></md-radio-button>
     </md-radio-group>
   </div>
 </div>

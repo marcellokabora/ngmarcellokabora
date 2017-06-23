@@ -30,9 +30,9 @@ import { PageWorksComponent } from './page/page-works/page-works.component';
 import { PageBrandComponent } from './page/page-brand/page-brand.component';
 import { FormLoginComponent } from './form/form-login/form-login.component';
 import { ZoomComponent } from './home/zoom/zoom.component';
-import { MenuComponent } from './menu/menu.component';
 import { MessageComponent } from './message/message.component';
 import { AppPipe } from './app.pipe';
+import { PageStoryComponent } from './page/page-story/page-story.component';
 
 enableProdMode();
 
@@ -58,9 +58,9 @@ enableProdMode();
     PageBrandComponent,
     FormLoginComponent,
     ZoomComponent,
-    MenuComponent,
     MessageComponent,
     AppPipe,
+    PageStoryComponent,
   ],
   imports: [
     BrowserModule,

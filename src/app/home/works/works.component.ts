@@ -26,7 +26,7 @@ export class WorksComponent implements OnInit {
 
     afAuth.authState.subscribe(log => {if(log) {this.login=true;} else {this.login=false;}});
 
-    this.works = db.list('/work');
+    this.works = db.list('/work').map(items => items.sort((a, b) => b.date - a.date)) as FirebaseListObservable<any[]>;
 
     
   }
@@ -40,7 +40,7 @@ export class WorksComponent implements OnInit {
         orderByChild: 'type',
         equalTo: type
       }
-    });
+    }).map(items => items.sort((a, b) => b.date - a.date)) as FirebaseListObservable<any[]>;
   }
 
 

@@ -66,3 +66,37 @@
 .item-tito .perc{
   color: gray;
 }
+
+
+@media(max-width: 1000px){
+  .skil-rows {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 50px;
+  }
+
+
+  .skil-tito{
+    border: none;
+    height: auto;
+    line-height: 50px;
+    padding: 0;
+    padding-left: 40px;
+    padding-right: 40px;
+    width: auto;
+    margin-bottom: 20px;
+  }
+.butt-righ{
+  display: none;
+}
+  .skil-cont .skil-info{
+    height: auto;
+    flex: auto;
+    margin-right: 0px;
+    width: 100%;
+    flex-wrap: wrap;
+    justify-content: center;
+    border-top: 1px solid silver !important;
+  }
+
+}
