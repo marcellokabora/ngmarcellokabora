@@ -46,11 +46,8 @@ snack-bar-container{
         height: 300px;
         width: 100%;
         z-index: -1;
-        // filter: brightness(80%) blur(2px);
-        background: url('/assets/slide/mk1.jpg');
-        background-attachment: fixed;
-        background-position: center;
-        background-repeat: no-repeat;
+        filter: brightness(80%) blur(40px);
+        background: url('/assets/slide/keyboard.jpg') top / cover;
         filter: blur(2px) brightness(80%);
     }
 }

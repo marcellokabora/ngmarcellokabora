@@ -13,7 +13,7 @@ export class SkillComponent implements OnInit {
     { name: 'illustrator', percent: '90', link: "http://www.adobe.com/products/illustrator.html/"},
     { name: 'photoshop', percent: '80', link: "http://www.adobe.com/products/photoshop.html/"},
     { name: 'indesign', percent: '70', link: "https://helpx.adobe.com/indesign.html/"},
-    { name: 'animate', percent: '70', link: "http://www.adobe.com/mt/products/flash.html/"},
+    { name: 'animate', percent: '70', link: "http://www.adobe.com/products/animate.html/"},
     { name: 'affinity', percent: '80', link: "https://affinity.serif.com/en-gb/"},
     { name: 'imovie', percent: '80', link: "http://www.apple.com/lae/mac/imovie/"},
     { name: 'mamp', percent: '100', link: "https://www.mamp.info/en/"},
@@ -64,7 +64,7 @@ export class SkillComponent implements OnInit {
     { name: 'xml', percent: '90', link: "http://www.xml.com/"},
     { name: 'git', percent: '90', link: "https://github.com/"},
     { name: 'analytics', percent: '70', link: "https://www.google.com/analytics/"},
-    { name: 'mongodb', percent: '60', link: "https://www.mongodb.com/"},
+    { name: 'sheets', percent: '60', link: "https://www.google.com/sheets/about/"},
   ];
 
 

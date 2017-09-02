@@ -52,11 +52,11 @@
   left: 0;
   height: 100%;
   width: 100%;
-  background: url('/assets/slide/mk1.jpg') center / cover;
+  background: url('/assets/slide/keyboard.jpg');
   // background-attachment: fixed;
-  // background-position: center;
+  background-position: top;
   // background-repeat: no-repeat;
-  // background-size: cover;
+  background-size: cover;
   padding-top: 20px;
   z-index: -1;
   filter: blur(2px) brightness(80%);

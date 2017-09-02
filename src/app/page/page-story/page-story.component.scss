@@ -14,17 +14,19 @@
   }
   .brandl{
     padding-right: 40px;
-    text-align: center;
-    flex: 1;
+    text-align: right;
+    width: auto;
   }
   .brandl img{
     width: 100%;
-    // min-width: 200px;
     max-width: 250px;
-  }
+    border-bottom: 1px dotted silver;
+    margin-bottom: 10px;
+    padding-bottom: 10px;
+}
 
   .brandr{
-    flex: 3;
+    flex: 10;
   }
 
   .tipo{
@@ -33,13 +35,22 @@
   .tito{
     font-size: 18px;
     text-transform: capitalize;
-    span{
+    div:first-child{
       font-weight: bold;
+    }
+    div:last-child{
+      border-top: 1px dotted silver;
+      border-bottom: 1px dotted silver;
+      margin-top: 5px;
+      padding-top: 5px;
+      margin-bottom: 5px;
+      padding-bottom: 5px;
+      color: grey;
     }
   }
   .date{
-    font-size: 16px;
-    color: gray;
+    font-size: 14px;
+    color: silver;
   }
 }
 
